@@ -1,0 +1,36 @@
+#include "mbed.h"
+
+Timer       tim;
+Ticker      tick;
+InterruptIn button(USER_BUTTON);
+Serial      pc(USBTX, USBRX);
+
+int count = 0;
+int begin = 0;
+int end = 0;
+
+void counting(){
+    count++;
+}
+
+void reset(){
+    count = 0;
+    begin = tim.read_ms();
+}
+
+int main(){
+    pc.baud(115200);    
+    button.fall(&reset);
+    tim.start();
+    begin = tim.read_ms();
+    tick.attach(&counting, 0.1);      
+    
+    while(1){
+        if(count == 30) {
+            end = tim.read_ms();
+            count = 0;            
+            pc.printf("%.1f[s]\r\n", (float)(end - begin)/1000);
+            begin = tim.read_ms();
+        }
+    }
+}

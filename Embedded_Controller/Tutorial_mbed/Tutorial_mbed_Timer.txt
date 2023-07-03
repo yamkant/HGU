@@ -1,0 +1,20 @@
+#include "mbed.h"
+
+Timer       timer;
+Serial      pc(USBTX, USBRX, 9600); // for using ¡®printf()¡¯
+
+int begin, end;
+int cnt = 0;
+
+int main(void){
+
+    timer.start();
+    
+    begin = timer.read_us();
+    
+    while(cnt < 100) cnt++;
+    
+    end = timer.read_us();
+    
+    pc.printf("Counting 100 takes %d [us]", end-begin);
+}

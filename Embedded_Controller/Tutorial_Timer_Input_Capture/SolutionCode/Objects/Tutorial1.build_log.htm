@@ -1,0 +1,103 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: •ÏVision V5.27.1.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: YeEun Lee, handong global university, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.27.1.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.27.1.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+C:\Users\lyned\Desktop\EC_DevelopmentDocuments\Lab\Lab_Input_Capture_Ultrasonic\Lab_Ultrasonic_keil_mod\Lab_Ultrasonic.uvprojx
+Project File Date:  10/18/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+..\..\..\Sources\Sources_mod\myRCC.h(4): warning:  #1295-D: Deprecated declaration RCC_HSI_init - give arg types
+  void RCC_HSI_init();
+..\..\..\Sources\Sources_mod\myRCC.h(5): warning:  #1295-D: Deprecated declaration RCC_PLL_init - give arg types
+  void RCC_PLL_init();
+..\..\..\Sources\Sources_mod\myRCC.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\mySysTick.h(9): warning:  #1295-D: Deprecated declaration SysTick_counter - give arg types
+  void SysTick_counter();
+..\..\..\Sources\Sources_mod\mySysTick.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myTIM.h(35): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myPWM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myUART.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c: 8 warnings, 0 errors
+compiling myPWM.c...
+..\..\..\Sources\Sources_mod\myTIM.h(35): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myPWM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myPWM.c(74): warning:  #177-D: variable "CHn"  was declared but never referenced
+        int CHn = PWM_pin->ch;  
+..\..\..\Sources\Sources_mod\myPWM.c(94): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\..\Sources\Sources_mod\myPWM.c: 4 warnings, 0 errors
+compiling myUART.c...
+..\..\..\Sources\Sources_mod\myUART.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myUART.c: 1 warning, 0 errors
+compiling myTIM.c...
+..\..\..\Sources\Sources_mod\myTIM.h(35): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myPWM.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\..\..\Sources\Sources_mod\myTIM.c(77): warning:  #188-D: enumerated type mixed with another type
+        IRQn_Type IRQHandler = 0; 
+..\..\..\Sources\Sources_mod\myTIM.c(77): warning:  #550-D: variable "IRQHandler"  was set but never used
+        IRQn_Type IRQHandler = 0; 
+..\..\..\Sources\Sources_mod\myTIM.c(187): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\..\Sources\Sources_mod\myTIM.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=9828 RO-data=616 RW-data=28 ZI-data=1636  
+FromELF: creating hex file...
+".\Objects\Tutorial1.axf" - 0 Error(s), 18 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
+                ARM.CMSIS.5.5.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.13.0.pack
+                Keil.STM32F4xx_DFP.2.13.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\lyned\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  C:\Users\lyned\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.2.0
+Build Time Elapsed:  00:00:25
+</pre>
+</body>
+</html>

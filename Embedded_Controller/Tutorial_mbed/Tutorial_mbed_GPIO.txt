@@ -1,0 +1,11 @@
+#include "mbed.h"
+
+DigitalIn  button(USER_BUTTON);
+DigitalOut led(LED1);
+
+int main() {
+    while(1) {
+        if(!button) led = 1;
+        else led = 0;
+    }
+}

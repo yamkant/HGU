@@ -1,0 +1,13 @@
+--cpu=Cortex-M4.fp
+".\objects\main.o"
+".\objects\startup_stm32f411xe.o"
+".\objects\system_stm32f4xx.o"
+".\objects\ec_gpio.o"
+".\objects\ec_sysclk.o"
+".\objects\ec_systimer.o"
+".\objects\ec_pwm.o"
+".\objects\ec_exti.o"
+--strict --scatter ".\Objects\Tutorial1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Tutorial1.map" -o .\Objects\Tutorial1.axf

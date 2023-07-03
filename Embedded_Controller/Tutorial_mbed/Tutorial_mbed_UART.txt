@@ -1,0 +1,14 @@
+#include "mbed.h"
+ 
+Serial  uart(USBTX, USBRX, 9600);
+ 
+int main(){
+    char RXD;    
+    while(1)
+    {        
+        if(uart.readable()){
+            RXD = uart.getc();
+            uart.printf("%c", RXD);
+        }
+    }
+}

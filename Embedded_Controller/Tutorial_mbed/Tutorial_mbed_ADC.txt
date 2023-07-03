@@ -1,0 +1,20 @@
+#include "mbed.h"
+                                                
+Serial      pc(USBTX, USBRX, 9600);                                                
+AnalogIn    CDS(A0);
+DigitalOut  led(LED1);
+
+int main() {
+    float measure;
+        
+    while(1) {
+        measure = CDS.read(); // mapping(0~3.3V -> 0.0~1.0)
+        measure = measure * 3300; // [mV] (0.0~1.0 -> 0~3300[mV])
+        pc.printf("measure = %f mV\n\r", measure);
+        
+        if (measure < 200) led = 1;
+        else               led = 0;
+        
+        wait(0.2); 
+    }
+}

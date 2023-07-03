@@ -1,0 +1,20 @@
+#include "mbed.h"
+
+InterruptIn button(USER_BUTTON); 
+DigitalOut  led(LED1);
+
+void pressed()
+{
+    led = 1; 
+}
+
+void released(){
+    led = 0;
+}
+
+int main()
+{
+    button.fall(&pressed);
+    button.rise(&released);
+    while (1);
+}

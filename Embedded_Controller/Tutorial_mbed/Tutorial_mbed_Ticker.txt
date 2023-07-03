@@ -1,0 +1,13 @@
+#include "mbed.h"
+
+Ticker     tick;
+DigitalOut led(LED1);
+
+void INT(){
+    led = !led;      
+}
+int main(void){
+    tick.attach(&INT, 1); // 1√ ∏∂¥Ÿ LED blink
+    
+    while(1);
+}
